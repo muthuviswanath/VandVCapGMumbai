@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class DemoPage {
@@ -131,6 +133,20 @@ public class DemoPage {
 		System.out.println(hidden_text.isDisplayed());
 		drv.findElement(By.xpath("//input[@id='show-textbox'][@value='Show']")).click();
 		System.out.println(hidden_text.isDisplayed());
+		
+		Thread.sleep(2000);
+		
+		Actions act = new Actions(drv);
+		act.moveToElement(drv.findElement(By.id("courses-iframe"))).perform();
+		drv.switchTo().frame("courses-iframe");
+		drv.findElement(By.xpath("//label[@for='Python']//input[@type='radio']")).click();
+		Thread.sleep(2000);
+		drv.switchTo().defaultContent();
+		
+		RemoteWebDriver rem = (RemoteWebDriver)drv;
+		rem.executeScript("window.scrollBy(0,0);");
+		Thread.sleep(2000);
+		drv.findElement(By.xpath("//input[@id='bmwcheck']")).click();
 	}
 }
 
