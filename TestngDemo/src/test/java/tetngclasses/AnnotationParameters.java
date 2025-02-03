@@ -24,10 +24,21 @@ public class AnnotationParameters {
 	@Test(priority = 1)
 	public void clickRadio() {
 		demo_page.clickPythonRadio();
+		try {Thread.sleep(2000);}catch(Exception e) {System.out.println(e.getMessage());}
 	}
-	@Test(dataProvider = "anyname",priority = 2)
+	@Test(dataProvider = "anyname",dependsOnMethods = "clickRadio", priority = 3)
 	public void alertMe(String name) throws Exception {
+		Thread.sleep(2000);
 		demo_page.alertMessage(name);
+		Thread.sleep(5000);
+	}
+	
+	@Parameters("username")
+	@Test(dependsOnMethods = "clickRadio", priority = 2)
+	public void anotherAlert(String param) throws Exception{
+		Thread.sleep(2000);
+		demo_page.alertMessage(param);
+		Thread.sleep(5000);
 	}
 	
 	@DataProvider(name = "anyname")
