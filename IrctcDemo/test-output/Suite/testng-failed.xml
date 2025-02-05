@@ -3,12 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testngclasses.BookTicket">
+      <class name="testngclasses.CheckReport">
         <methods>
-          <include name="navigate"/>
-          <include name="searchTrains"/>
+          <include name="startReporter"/>
+          <include name="tearDown"/>
+          <include name="getResult"/>
+          <include name="testSkipped"/>
+          <include name="testFailed"/>
         </methods>
-      </class> <!-- testngclasses.BookTicket -->
+      </class> <!-- testngclasses.CheckReport -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
