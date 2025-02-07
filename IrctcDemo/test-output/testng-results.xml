@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-05T05:56:54 IST" name="Suite" finished-at="2025-02-05T05:56:54 IST" duration-ms="794">
+  <suite started-at="2025-02-07T16:00:01 IST" name="Default suite" finished-at="2025-02-07T16:00:01 IST" duration-ms="67">
     <groups>
     </groups>
-    <test started-at="2025-02-05T05:56:54 IST" name="Test" finished-at="2025-02-05T05:56:54 IST" duration-ms="794">
-      <class name="testngclasses.CheckReport">
-        <test-method is-config="true" signature="startReporter()[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="startReporter" finished-at="2025-02-05T05:56:54 IST" duration-ms="367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReporter -->
-        <test-method signature="testFailed()[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="testFailed" finished-at="2025-02-05T05:56:54 IST" duration-ms="15" status="FAIL">
-          <exception class="java.lang.AssertionError">
+    <test started-at="2025-02-07T16:00:01 IST" name="Default test" finished-at="2025-02-07T16:00:01 IST" duration-ms="67">
+      <class name="testngclasses.TestDriverSetup">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-07T16:00:01 IST" name="initialize" finished-at="2025-02-07T16:00:01 IST" duration-ms="9" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[Unsupported Browser]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at testngclasses.CheckReport.testFailed(CheckReport.java:20)
+              <![CDATA[java.lang.IllegalArgumentException: Unsupported Browser
+at utilities.DriverSetup.getDriver(DriverSetup.java:44)
+at testngclasses.TestDriverSetup.initialize(TestDriverSetup.java:17)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -51,54 +42,27 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testFailed -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="getResult" finished-at="2025-02-05T05:56:54 IST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testFailed status=FAILURE method=CheckReport.testFailed()[pri:0, instance:testngclasses.CheckReport@34a3d150] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method signature="testPassed()[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="testPassed" finished-at="2025-02-05T05:56:54 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPassed -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="getResult" finished-at="2025-02-05T05:56:54 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testPassed status=SUCCESS method=CheckReport.testPassed()[pri:0, instance:testngclasses.CheckReport@34a3d150] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method signature="testSkipped()[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="testSkipped" finished-at="2025-02-05T05:56:54 IST" duration-ms="1" status="SKIP">
-          <exception class="org.testng.SkipException">
+        </test-method> <!-- initialize -->
+        <test-method signature="testTerms()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-07T16:00:01 IST" name="testTerms" finished-at="2025-02-07T16:00:01 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[The test has been skipped]]>
+              <![CDATA[Unsupported Browser]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.SkipException: The test has been skipped
-at testngclasses.CheckReport.testSkipped(CheckReport.java:26)
+              <![CDATA[java.lang.IllegalArgumentException: Unsupported Browser
+at utilities.DriverSetup.getDriver(DriverSetup.java:44)
+at testngclasses.TestDriverSetup.initialize(TestDriverSetup.java:17)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -117,26 +81,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSkipped -->
-        <test-method is-config="true" signature="getResult(org.testng.ITestResult)[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="getResult" finished-at="2025-02-05T05:56:54 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testSkipped status=SKIP method=CheckReport.testSkipped()[pri:0, instance:testngclasses.CheckReport@34a3d150] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testngclasses.CheckReport@34a3d150]" started-at="2025-02-05T05:56:54 IST" name="tearDown" finished-at="2025-02-05T05:56:54 IST" duration-ms="344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testngclasses.CheckReport -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testTerms -->
+      </class> <!-- testngclasses.TestDriverSetup -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

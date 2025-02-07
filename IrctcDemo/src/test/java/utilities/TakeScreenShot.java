@@ -6,12 +6,15 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-public class TakeScreenShot {
+public class TakeScreenShot{
 	static int imgcount = 1;
-	public static void takeScreenShot(WebDriver drv,String filename) throws Exception {
-
-		File ss = ((TakesScreenshot)drv).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(ss, new File("./screenshots/Step_"+ (imgcount++) +"_"+filename+".png"));
+	public String takeScreenShot(WebDriver drv,String filename) throws Exception {
+		String screenshotPath = System.getProperty("user.dir") + "/test-output/screenshots";
+		File screenshot = ((TakesScreenshot) drv).getScreenshotAs(OutputType.FILE);        
+		String screenshotName = "Step_" + (imgcount++) + "_"+filename+".png";
+		screenshotPath = screenshotPath + File.separator + screenshotName;
+		FileUtils.copyFile(screenshot, new File(screenshotPath));
+		return screenshotPath;
 	}
 }
 

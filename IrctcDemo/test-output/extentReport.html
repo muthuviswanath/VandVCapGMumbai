@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Simple Automation Report</title>
+<title>Extent Report Sample</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
@@ -32,10 +32,10 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Test Report</span></a>
+<a href="#"><span class="badge badge-primary">Regression Testing - Sprint 45</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Wednesday, February 05, 2025, 05:56:54</span></a>
+<a href="#"><span class="badge badge-primary">Wednesday, Feb 05, 2025 01:31:29</span></a>
 </li>
 </ul>
 </div>
@@ -45,11 +45,6 @@
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('exception-view')">
-<a id="nav-exception" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -72,8 +67,6 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
-<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
-<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -81,89 +74,14 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="fail" test-id="1"
+        <li class="test-item"  status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Test Case 2</p>
+            <p class="name">IRCTC Search Trains Scenario</p>
             <p class="text-sm">
-              <span>5:56:54 am</span> / <span>00:00:00:020</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Test Case 2</h5>
-<span class='badge badge-success'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-danger'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-default'>00:00:00:020</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-<div class="m-t-10 m-l-5">This test case has failed</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>5:56:54 am</td>
-        <td>
-          <textarea readonly class="code-block">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at testngclasses.CheckReport.testFailed(CheckReport.java:20)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</textarea>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test Case 1</p>
-            <p class="text-sm">
-              <span>5:56:54 am</span> / <span>00:00:00:002</span>
+              <span>1:31:43 pm</span> / <span>00:00:00:607</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -171,66 +89,284 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Test Case 1</h5>
-<span class='badge badge-success'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-danger'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-default'>00:00:00:002</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:31:43 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:31:44 pm</span>
+<span class='badge badge-default'>00:00:00:607</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5">This test case has passed</div>
+<div class="m-t-10 m-l-5">Navigation Page Step</div>
 </div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>5:56:54 am</td>
-        <td>
-          
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_1_Homepage.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_1_Homepage.png">
+  
+    
+
+    </div></div>
           </div>
         </li>
-        <li class="test-item"  status="skip" test-id="3"
+        <li class="test-item"  status="pass" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Test Case 3</p>
+            <p class="name">IRCTC Search Trains Scenario</p>
             <p class="text-sm">
-              <span>5:56:54 am</span> / <span>00:00:00:005</span>
-              <span class="badge skip-bg log float-right">Skip</span>
+              <span>1:31:45 pm</span> / <span>00:00:00:340</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Test Case 3</h5>
-<span class='badge badge-success'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-danger'>02.05.2025 5:56:54 am</span>
-<span class='badge badge-default'>00:00:00:005</span>
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:31:45 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:31:45 pm</span>
+<span class='badge badge-default'>00:00:00:340</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">After Login</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_2_After_Login_Click.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_2_After_Login_Click.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:31:46 pm</span> / <span>00:00:00:460</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:31:46 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:31:46 pm</span>
+<span class='badge badge-default'>00:00:00:460</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5">This test case has been skipped</div>
+<div class="m-t-10 m-l-5">Entering User Name</div>
 </div>
-</div><div class="detail-body mt-4">
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_3_After_Entering_Username.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_3_After_Entering_Username.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:31:48 pm</span> / <span>00:00:00:498</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:31:48 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:31:48 pm</span>
+<span class='badge badge-default'>00:00:00:498</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">Entering Password</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_5_After_Entering_Password.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_5_After_Entering_Password.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:32:04 pm</span> / <span>00:00:00:252</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:32:04 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:32:05 pm</span>
+<span class='badge badge-default'>00:00:00:252</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">After Login</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_7_After_Login.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_7_After_Login.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:32:07 pm</span> / <span>00:00:00:283</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:32:07 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:32:08 pm</span>
+<span class='badge badge-default'>00:00:00:283</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">After_Entering_Source</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_8_After_Entering_Source.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_8_After_Entering_Source.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:32:10 pm</span> / <span>00:00:00:204</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:32:10 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:32:10 pm</span>
+<span class='badge badge-default'>00:00:00:204</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">After_Entering_Destination</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_9_After_Entering_Destination.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_9_After_Entering_Destination.png">
+  
+    
+
+    </div></div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">IRCTC Search Trains Scenario</p>
+            <p class="text-sm">
+              <span>1:32:12 pm</span> / <span>00:00:00:341</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">IRCTC Search Trains Scenario</h5>
+<span class='badge badge-success'>02.05.2025 1:32:12 pm</span>
+<span class='badge badge-danger'>02.05.2025 1:32:12 pm</span>
+<span class='badge badge-default'>00:00:00:341</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">After Searching the trains</div>
+</div>
+</div>    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_11_After_Clicking_Search_Trains.png' src="D:\Capgemini_Mumbai_AutomationTesting\IrctcDemo/test-output/screenshots\Step_11_After_Clicking_Search_Trains.png">
+  
+    
+
+    </div></div>
+<div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>5:56:54 am</td>
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:32:12 pm</td>
         <td>
           
         </td>
@@ -249,79 +385,30 @@
 </div>
 <div class="test-content-detail"><div class="detail-body"></div></div>
 </div></div>
-<div class="test-wrapper row view exception-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">java.lang.AssertionError</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>java.lang.AssertionError</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>05:56:54 am</td>
-<td>
-<a href="#" class="linked" test-id='1' id='1'>Test Case 2</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="container-fluid p-4 view dashboard-view">
+<div class="container-fluid p-4 view dashboard-view">
 <div class="row">
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Wednesday, February 05, 2025, 05:56:54</h3>
+<h3>Wednesday, Feb 05, 2025 01:31:29</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Wednesday, February 05, 2025, 05:56:54</h3>
+<h3>Wednesday, Feb 05, 2025 01:32:12</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>8</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 </div>
@@ -337,13 +424,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'>
-<b>1</b> tests passed
+<div><small data-tooltip='100%'>
+<b>8</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='33%'><b>1</b> tests failed,
-<b>1</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -360,10 +447,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'><b>1</b> events passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> events passed</small></div>
 <div>
-<small data-tooltip='33%'><b>1</b> events failed,
-<b data-tooltip='%'>1</b> others
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -379,7 +466,7 @@
 </div></div>
 <script>
 var timeline = {
-"Test Case 2":0.02,"Test Case 1":0.002,"Test Case 3":0.005
+"IRCTC Search Trains Scenario":0.607,"IRCTC Search Trains Scenario":0.34,"IRCTC Search Trains Scenario":0.46,"IRCTC Search Trains Scenario":0.498,"IRCTC Search Trains Scenario":0.252,"IRCTC Search Trains Scenario":0.283,"IRCTC Search Trains Scenario":0.204,"IRCTC Search Trains Scenario":0.341
 };
 </script>
 <div class="row">
@@ -388,10 +475,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 1,
+passParent: 8,
+failParent: 0,
 warningParent: 0,
-skipParent: 1,
+skipParent: 0,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -406,9 +493,9 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 1,
-failEvents: 1,
+failEvents: 0,
 warningEvents: 0,
-skipEvents: 1,
+skipEvents: 0,
 infoEvents: 0
 };
 </script>        </div>

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testngclasses.BookTicket">
+      <class name="testngclasses.TestDriverSetup">
         <methods>
-          <include name="navigate"/>
-          <include name="loginToApp"/>
-          <include name="initializeTestData"/>
+          <include name="testTerms"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- testngclasses.BookTicket -->
+      </class> <!-- testngclasses.TestDriverSetup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

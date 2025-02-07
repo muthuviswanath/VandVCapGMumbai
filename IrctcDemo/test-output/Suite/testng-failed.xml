@@ -3,15 +3,11 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testngclasses.CheckReport">
+      <class name="testngclasses.TestDriverSetup">
         <methods>
-          <include name="startReporter"/>
-          <include name="tearDown"/>
-          <include name="getResult"/>
-          <include name="testSkipped"/>
-          <include name="testFailed"/>
+          <include name="testTerms"/>
         </methods>
-      </class> <!-- testngclasses.CheckReport -->
+      </class> <!-- testngclasses.TestDriverSetup -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
