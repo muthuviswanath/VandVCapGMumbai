@@ -1,4 +1,4 @@
-package utilities;
+package utils;
 
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
