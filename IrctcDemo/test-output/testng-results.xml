@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-07T16:00:01 IST" name="Default suite" finished-at="2025-02-07T16:00:01 IST" duration-ms="67">
+  <suite started-at="2025-02-10T11:55:58 IST" name="Default suite" finished-at="2025-02-10T11:55:58 IST" duration-ms="108">
     <groups>
     </groups>
-    <test started-at="2025-02-07T16:00:01 IST" name="Default test" finished-at="2025-02-07T16:00:01 IST" duration-ms="67">
+    <test started-at="2025-02-10T11:55:58 IST" name="Default test" finished-at="2025-02-10T11:55:58 IST" duration-ms="108">
       <class name="testngclasses.TestDriverSetup">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-07T16:00:01 IST" name="initialize" finished-at="2025-02-07T16:00:01 IST" duration-ms="9" status="FAIL">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-10T11:55:58 IST" name="initialize" finished-at="2025-02-10T11:55:58 IST" duration-ms="22" status="FAIL">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Unsupported Browser]]>
@@ -46,7 +46,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="testTerms()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-07T16:00:01 IST" name="testTerms" finished-at="2025-02-07T16:00:01 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testTerms()[pri:0, instance:testngclasses.TestDriverSetup@4218d6a3]" started-at="2025-02-10T11:55:58 IST" name="testTerms" finished-at="2025-02-10T11:55:58 IST" duration-ms="0" status="SKIP">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Unsupported Browser]]>
