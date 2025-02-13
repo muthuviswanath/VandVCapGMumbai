@@ -39,8 +39,15 @@ public class SetupDriver {
 		        notification_prefs.put("profile.default_content_setting_values.notifications", 1);
 		        options.setExperimentalOption("prefs", notification_prefs);
 		        
+		        //To disable cookies
+		        options.addArguments("--disable-blink-features=BlockCredentialedSubresources");
+		        options.addArguments("--disable-features=CookiesWithoutSameSiteMustBeSecure,SameSiteByDefaultCookies");
+		        options.addArguments("--disable-site-isolation-trials");
+		        
+		        
 				driver = new ChromeDriver(options);
 				driver.navigate().to(url);
+				driver.manage().deleteAllCookies();
 				break;
 			case "firefox":
 				WebDriverManager.firefoxdriver().setup();
