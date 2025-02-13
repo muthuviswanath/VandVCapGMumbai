@@ -3,12 +3,14 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.IxigoCheck">
+      <class name="tests.MultiplTestCases">
         <methods>
-          <include name="initialize"/>
+          <include name="chechNames"/>
+          <include name="chechName"/>
           <include name="init"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- tests.IxigoCheck -->
+      </class> <!-- tests.MultiplTestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

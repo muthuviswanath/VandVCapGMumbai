@@ -1,5 +1,8 @@
 package driversetup;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,7 +19,7 @@ public class SetupDriver {
 	private SetupDriver() {
 	}
 	
-	@BeforeClass
+
 	public static WebDriver getDriver(String browsername,String url) {
 		if(driver==null) {
 			switch (browsername.toLowerCase()) {
@@ -25,6 +28,17 @@ public class SetupDriver {
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--disable-popup-blocking");
 				options.addArguments("--disable-notifications");
+				
+				//To disable location
+				Map<String, Object> prefs = new HashMap<>();
+		        prefs.put("profile.default_content_setting_values.geolocation", 2);
+		        options.setExperimentalOption("prefs", prefs);
+		        
+		        //To allow Notification
+		        Map<String, Object> notification_prefs = new HashMap<>();
+		        notification_prefs.put("profile.default_content_setting_values.notifications", 1);
+		        options.setExperimentalOption("prefs", notification_prefs);
+		        
 				driver = new ChromeDriver(options);
 				driver.navigate().to(url);
 				break;
@@ -53,11 +67,11 @@ public class SetupDriver {
 
 	} 
 
-	@AfterClass
-	public static void quitDriver() {
-		if(driver != null) {
-			driver.quit();
-			driver = null;
-		}
-	}
+//	@AfterClass
+//	public static void quitDriver() {
+//		if(driver != null) {
+//			driver.quit();
+//			driver = null;
+//		}
+//	}
 }

@@ -13,34 +13,37 @@ import utils.ExpWait;
 
 public class IxigoBasePage {
 	private WebDriver driver;
-	
+
 	@FindBy(xpath = "//iframe[@id='wiz-iframe-intent']")
 	private WebElement pop_up;
 
+	@FindBy(xpath = "//a[@href='/hotels']")
+	private WebElement hotel_link;
+
 	@FindBy(xpath = "//p[contains(text(),'BOM - Mumbai')]")
 	private WebElement click_from;
-	
+
 	@FindBy(xpath = "//input[@value='Mumbai']")
 	private WebElement from_input_default;
-	
+
 	@FindBy(xpath = "//label[text()='From']/following::input")
 	private WebElement from_input;
-	
+
 	@FindBy(xpath = "//span[@class='text-primary text-sm']")
 	private List<WebElement>  select_from_airport_list;
-	
+
 	@FindBy(xpath = "//label[text()='To']/following::input")
 	private WebElement to_input;
-	
+
 	@FindBy(xpath = "//span")
 	private List<WebElement>  select_to_airport_list;
-	
+
 	@FindBy(xpath = "//button//abbr")
 	private List<WebElement>  select_date;
 
 	@FindBy(xpath = "//button[text()='Search']")
 	WebElement search_button;
-		
+
 	public IxigoBasePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -95,7 +98,7 @@ public class IxigoBasePage {
 	public WebElement getSearch_button() {
 		return search_button;
 	}
-	
+
 	public void searchFlights(String source, String src_code, String destn, String destn_code, String date) throws Exception {
 		ExpWait.waitForElement(driver, 10, pop_up);
 		if (pop_up.isDisplayed()) {
@@ -162,5 +165,14 @@ public class IxigoBasePage {
 		}
 	}
 
+	public void getHotels() {
+		if (pop_up.isDisplayed()) {
+			pop_up.click();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+			driver.navigate().to("https://www.ixigo.com");
+			ExpWait.waitForElement(driver, 10, click_from);
+			hotel_link.click();
+		}
+	}
 
 }

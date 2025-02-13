@@ -10,7 +10,7 @@ import org.openqa.selenium.WebDriver;
 public class Screenshots {
 	static int imgcount = 1;
 	public String takeScreenShot(WebDriver drv,String filename) throws Exception {
-		String screenshotPath = System.getProperty("user.dir") + "/screenshots";
+		String screenshotPath = System.getProperty("user.dir") + "./screenshots";
 		File screenshot = ((TakesScreenshot) drv).getScreenshotAs(OutputType.FILE);        
 		String screenshotName = "Step_" + (imgcount++) + "_"+filename+".png";
 		screenshotPath = screenshotPath + File.separator + screenshotName;
