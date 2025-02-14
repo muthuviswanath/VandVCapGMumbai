@@ -3,14 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.MultiplTestCases">
+      <class name="tests.SampleTest1">
         <methods>
-          <include name="chechNames"/>
-          <include name="chechName"/>
-          <include name="init"/>
-          <include name="tearDown"/>
+          <include name="initializeReporters"/>
+          <include name="testCase2"/>
+          <include name="getTestStatus"/>
+          <include name="setUpTest"/>
+          <include name="closeReport"/>
         </methods>
-      </class> <!-- tests.MultiplTestCases -->
+      </class> <!-- tests.SampleTest1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
