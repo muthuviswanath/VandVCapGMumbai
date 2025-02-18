@@ -19,7 +19,7 @@ public class SetupDriver {
 	}
 
 
-	public static WebDriver getDriver(String browsername, String url) {
+	public static WebDriver getDriver(String browsername) {
 		if (driver == null) {
 			switch (browsername.toLowerCase()) {
 			case "chrome":
@@ -59,16 +59,14 @@ public class SetupDriver {
 				throw new IllegalArgumentException("Unsupported Browser");
 			}
 		}
-		driver.navigate().to(url);
 		driver.manage().window().maximize();
 		return driver;
 	}
 
-	//	@AfterClass
-	//	public static void quitDriver() {
-	//		if(driver != null) {
-	//			driver.quit();
-	//			driver = null;
-	//		}
-	//	}
+		public static void quitDriver() {
+			if(driver != null) {
+				driver.quit();
+				driver = null;
+			}
+		}
 }

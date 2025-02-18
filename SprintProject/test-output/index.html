@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.SampleTest1" class="method navigator-link" hash-for-method="testCase2">testCase2</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tests.SampleTest1" class="method navigator-link" hash-for-method="testCase1">testCase1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tests.SampleTest1" class="method navigator-link" hash-for-method="testCase2">testCase2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -142,26 +133,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.SampleTest1</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testCase2">
-                  </a> <!-- testCase2 -->
-                  <span class="method-name">testCase2</span>
-                  <div class="stack-trace">java.lang.AssertionError: Failing testCase2 for testing reporting.
-	at tests.SampleTest1.testCase2(SampleTest1.java:19)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -173,6 +144,13 @@
                   <a name="testCase1">
                   </a> <!-- testCase1 -->
                   <span class="method-name">testCase1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase2">
+                  </a> <!-- testCase2 -->
+                  <span class="method-name">testCase2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -256,24 +234,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testCase1')
 data.setCell(0, 2, 'tests.SampleTest1')
-data.setCell(0, 3, 28);
+data.setCell(0, 3, 7);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCase2')
-data.setCell(1, 2, 'tests.SampleTest1')
+data.setCell(1, 1, 'testCase3')
+data.setCell(1, 2, 'tests.SampleTest2')
 data.setCell(1, 3, 5);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testCase3')
-data.setCell(2, 2, 'tests.SampleTest2')
+data.setCell(2, 1, 'testCase2')
+data.setCell(2, 2, 'tests.SampleTest1')
 data.setCell(2, 3, 3);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testCase4')
 data.setCell(3, 2, 'tests.SampleTest2')
-data.setCell(3, 3, 1);
+data.setCell(3, 3, 2);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 ms</span>
+              <span class="suite-total-time">Total running time: 17 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -315,63 +293,61 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest([TestResult name={null} status=CREATED method=SampleTest1.testCase1()[pri:0, instance:tests.SampleTe...)</span>
-                <span class="method-start">454 ms</span>
+                <span class="method-start">292 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCase1</span>
-                <span class="method-start">462 ms</span>
+                <span class="method-start">300 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getTestStatus([TestResult name=testCase1 status=SUCCESS method=SampleTest1.testCase1()[pri:0, instance:tests.Sampl...)</span>
-                <span class="method-start">504 ms</span>
+                <span class="method-start">313 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">testCase2</span>
+                <span class="method-start">322 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest([TestResult name={null} status=CREATED method=SampleTest1.testCase2()[pri:0, instance:tests.SampleTe...)</span>
-                <span class="method-start">512 ms</span>
+                <span class="method-start">322 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testCase2</span>
-                <span class="method-start">518 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getTestStatus([TestResult name=testCase2 status=FAILURE method=SampleTest1.testCase2()[pri:0, instance:tests.Sampl...)</span>
-                <span class="method-start">535 ms</span>
+                <span class="method-name">getTestStatus([TestResult name=testCase2 status=SUCCESS method=SampleTest1.testCase2()[pri:0, instance:tests.Sampl...)</span>
+                <span class="method-start">329 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SampleTest2</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest([TestResult name={null} status=CREATED method=SampleTest2.testCase3()[pri:0, instance:tests.SampleTe...)</span>
-                <span class="method-start">556 ms</span>
+                <span class="method-start">333 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCase3</span>
-                <span class="method-start">557 ms</span>
+                <span class="method-start">334 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getTestStatus([TestResult name=testCase3 status=SUCCESS method=SampleTest2.testCase3()[pri:0, instance:tests.Sampl...)</span>
-                <span class="method-start">570 ms</span>
+                <span class="method-start">343 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest([TestResult name={null} status=CREATED method=SampleTest2.testCase4()[pri:0, instance:tests.SampleTe...)</span>
-                <span class="method-start">574 ms</span>
+                <span class="method-start">347 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCase4</span>
-                <span class="method-start">575 ms</span>
+                <span class="method-start">348 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">getTestStatus([TestResult name=testCase4 status=SUCCESS method=SampleTest2.testCase4()[pri:0, instance:tests.Sampl...)</span>
-                <span class="method-start">579 ms</span>
+                <span class="method-start">356 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SampleTest1</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">closeReport</span>
-                <span class="method-start">659 ms</span>
+                <span class="method-start">405 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
